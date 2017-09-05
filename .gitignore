@@ -98,4 +98,8 @@ ENV/
 /site
 
 # mypy
+<<<<<<< HEAD
 .mypy_cache/
+=======
+.mypy_cache/
+>>>>>>> a3153ad4f045d0f98b2629040e7ac176cf385610
