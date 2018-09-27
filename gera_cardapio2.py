@@ -74,14 +74,27 @@ def formataEmSemanas():
 		dia = item.dia[0:2]
 		mes = item.dia[3:5]
 		data = datetime.date(ano, int(mes), int(dia))
+		#print(data)
 		if semana == 1:
 			brancos = data.weekday()
+<<<<<<< HEAD
 			if brancos == 0:
 				verificou = True
 			if not verificou:
 				for x in range(0, brancos):
 					semana1.append(Refeicao('', '', '', '', ''))
 					contador = contador + 1
+=======
+			marcado = False
+			#print("brancos :")
+			#print( brancos)
+			if marcado:
+				for x in range(0, brancos):
+					semana1.append(Refeicao('', '', '', '', ''))
+					contador = contador + 1
+					marcado = True
+					#print("adicionando branco na semana1")
+>>>>>>> master
 			semana1.append(item)
 		elif semana == 2:
 			semana2.append(item)
@@ -120,7 +133,11 @@ def trataCelula(celula):
 	substituido = pattern.sub(r'\1 \2', retorno)
 	return substituido
 
+<<<<<<< HEAD
 doc = docx.Document('cardapio_outubro.docx')
+=======
+doc = docx.Document('cardapio_janeiro.docx')
+>>>>>>> master
 fullText = []
 refeicoes = []
 contador = 1
@@ -132,10 +149,16 @@ for table in doc.tables:
 			fullText.append(trataCelula(cell))
 
 def create_index_html():
+<<<<<<< HEAD
     fname = "outubro.html"
     mes = "outubro"
     aniversario = "26/10 (sexta-feira)"
     lanche = "17/10 (quarta-feira)"
+=======
+    fname = "output.html"
+    mes = "janeiro"
+    aniversario = "29/09 (sexta-feira)"
+>>>>>>> master
 
     context = {
         'mes': mes,
