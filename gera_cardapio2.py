@@ -60,6 +60,7 @@ def adicionaJanta(cardapio):
 			contador = contador + 1									
 
 def formataEmSemanas():
+	verificou = False
 	now = datetime.datetime.now()
 	ano = now.year
 	semana = 1
@@ -75,24 +76,21 @@ def formataEmSemanas():
 		data = datetime.date(ano, int(mes), int(dia))
 		if semana == 1:
 			brancos = data.weekday()
-			for x in range(0, brancos):
-				semana1.append(Refeicao('', '', '', '', ''))
-				contador = contador + 1
-				#print("adicionando branco na semana1")
+			if brancos == 0:
+				verificou = True
+			if not verificou:
+				for x in range(0, brancos):
+					semana1.append(Refeicao('', '', '', '', ''))
+					contador = contador + 1
 			semana1.append(item)
-			#print("adicionando " + item.dia + " na semana1")
 		elif semana == 2:
 			semana2.append(item)
-			#print("adicionando " + item.dia + " na semana2")
 		elif semana == 3:
 			semana3.append(item)
-			#print("adicionando " + item.dia + " na semana3")
 		elif semana == 4:
 			semana4.append(item)
-			#print("adicionando " + item.dia + " na semana4")
 		else:
 			semana5.append(item)
-			#print("adicionando " + item.dia + " na semana5")
 		contador = contador + 1
 		if contador > 5:
 			contador = 1
@@ -122,7 +120,7 @@ def trataCelula(celula):
 	substituido = pattern.sub(r'\1 \2', retorno)
 	return substituido
 
-doc = docx.Document('cardapio.docx')
+doc = docx.Document('cardapio_outubro.docx')
 fullText = []
 refeicoes = []
 contador = 1
@@ -134,13 +132,15 @@ for table in doc.tables:
 			fullText.append(trataCelula(cell))
 
 def create_index_html():
-    fname = "output.html"
-    mes = "setembro"
-    aniversario = "29/09 (sexta-feira)"
+    fname = "outubro.html"
+    mes = "outubro"
+    aniversario = "26/10 (sexta-feira)"
+    lanche = "17/10 (quarta-feira)"
 
     context = {
         'mes': mes,
         'aniversario': aniversario,
+        'lanche': lanche,
         'cardapio': final
     }
 
