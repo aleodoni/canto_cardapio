@@ -130,7 +130,7 @@ def trataCelula(celula):
 	substituido = pattern.sub(r'\1 \2', retorno)
 	return substituido
 
-doc = docx.Document('cardapio_janeiro.docx')
+doc = docx.Document('cardapio_fevereiro19.docx')
 fullText = []
 refeicoes = []
 contador = 1
@@ -142,10 +142,10 @@ for table in doc.tables:
 			fullText.append(trataCelula(cell))
 
 def create_index_html():
-    fname = "outubro.html"
-    mes = "outubro"
-    aniversario = "26/10 (sexta-feira)"
-    lanche = "17/10 (quarta-feira)"
+    fname = "fevereiro19.html"
+    mes = "fevereiro"
+    aniversario = "28/02 (quinta-feira)"
+    lanche = "14/02 (quinta-feira)"
     context = {
         'mes': mes,
         'aniversario': aniversario,
