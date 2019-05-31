@@ -3,7 +3,11 @@ Todas as refeições oferecidas na escola são cuidadosamente elaboradas pela no
 O cardápio dos alunos do Berçário é elaborado de acordo com os hábitos alimentares que a criança possui em casa, sendo respeitado e implantado da mesma forma. A inclusão de novos alimentos irá acontecer a partir da liberação do pediatra. Dessa forma os Pais devem informar à escola quanto às implantações a serem feitas no cardápio.
 
 O custo das refeições já está incluso no valor da mensalidade.
+<<<<<<< HEAD
 <h2 style="text-align: center;">Cardápio dos níveis Infantil 2, 3, 4 e 5 do mês de {{ mes }}</h2>
+=======
+<h2 style="text-align: center;">Cardápio dos níveis 2/3/4/5 do mês de {{ mes }}</h2>
+>>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929
 
 <table class="cardapio" border="0" cellspacing="0" cellpadding="0">
 	{% for semana in cardapio %}
@@ -22,34 +26,34 @@ O custo das refeições já está incluso no valor da mensalidade.
 				<td align="left" height="17">Dias</td>
 				{% for refeicao in semana %}
 				<td align="left">{{ refeicao.dia }}</td>
-				{% endfor %}		
+				{% endfor %}
 			</tr>
 			<tr>
 				<td align="left"><img src="http://alewood.com.br/canto/wp-content/uploads/2017/05/cafe_manha-1.jpg" width="200" /></td>
 				{% for refeicao in semana %}
 				<td align="left">{{ refeicao.cafe }}</td>
-				{% endfor %}		
+				{% endfor %}
 			</tr>
 			<tr>
 				<td align="left"><img src="http://alewood.com.br/canto/wp-content/uploads/2017/05/almoco.jpg" width="200" /></td>
 				{% for refeicao in semana %}
 				<td align="left">{{ refeicao.almoco }}</td>
-				{% endfor %}		
+				{% endfor %}
 			</tr>
 			<tr>
 				<td align="left"><img src="http://alewood.com.br/canto/wp-content/uploads/2017/05/lanche_tarde.jpg" width="200" /></td>
 				{% for refeicao in semana %}
 				<td align="left">{{ refeicao.lanche }}</td>
-				{% endfor %}		
+				{% endfor %}
 			</tr>
 			<tr>
 				<td align="left"><img src="http://alewood.com.br/canto/wp-content/uploads/2017/05/sopa.jpg" width="200" /></td>
 				{% for refeicao in semana %}
 				<td align="left">{{ refeicao.janta }}</td>
-				{% endfor %}		
+				{% endfor %}
 			</tr>
 		</tbody>
-	{% endfor %}		
+	{% endfor %}
 </table>
 
 Nossos alimentos são preparados no próprio local. Todos os sucos e frutas oferecidos estão de acordo com a sua sazonalidade.
@@ -83,4 +87,8 @@ Sopinha: A partir das 17h10
 
 Viviane Daniel – Nutricionista
 
+<<<<<<< HEAD
 CRN8 – 3881
+=======
+CRN8 – 4649
+>>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929

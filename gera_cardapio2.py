@@ -39,7 +39,7 @@ def adicionaAlmoco(cardapio):
 		for item in cardapio:
 			if item == data:
 				item_array.almoco = cardapio[contador+12]
-			contador = contador + 1			
+			contador = contador + 1
 
 def adicionaLancheTarde(cardapio):
 	for item_array in arrayCardapio:
@@ -48,7 +48,7 @@ def adicionaLancheTarde(cardapio):
 		for item in cardapio:
 			if item == data:
 				item_array.lanche = cardapio[contador+18]
-			contador = contador + 1						
+			contador = contador + 1
 
 def adicionaJanta(cardapio):
 	for item_array in arrayCardapio:
@@ -57,7 +57,7 @@ def adicionaJanta(cardapio):
 		for item in cardapio:
 			if item == data:
 				item_array.janta = cardapio[contador+24]
-			contador = contador + 1									
+			contador = contador + 1
 
 def formataEmSemanas():
 	verificou = False
@@ -91,7 +91,11 @@ def formataEmSemanas():
 					semana1.append(Refeicao('', '', '', '', ''))
 					contador = contador + 1
 					marcado = True
+<<<<<<< HEAD
 					print("adicionando branco na semana1")
+=======
+					#print("adicionando branco na semana1")
+>>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929
 			semana1.append(item)
 		elif semana == 2:
 			semana2.append(item)
@@ -116,7 +120,7 @@ def formataTexto(texto):
 	if texto.find(',') < 0:
 		texto += ', '
 	#texto = texto.replace(',,', '')
-	return texto	
+	return texto
 
 def trataCelula(celula):
 	retorno = ''
@@ -130,7 +134,11 @@ def trataCelula(celula):
 	substituido = pattern.sub(r'\1 \2', retorno)
 	return substituido
 
+<<<<<<< HEAD
 doc = docx.Document('cardapio_maio.docx')
+=======
+doc = docx.Document('cardapio_fevereiro19.docx')
+>>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929
 fullText = []
 refeicoes = []
 contador = 1
@@ -142,11 +150,18 @@ for table in doc.tables:
 			fullText.append(trataCelula(cell))
 
 def create_index_html():
+<<<<<<< HEAD
     fname = "maio.html"
     mes = "maio"
     aniversario = "31/05 (sexta-feira)"
     lanche = "09/03 (terça-feira)"
 
+=======
+    fname = "fevereiro19.html"
+    mes = "fevereiro"
+    aniversario = "28/02 (quinta-feira)"
+    lanche = "14/02 (quinta-feira)"
+>>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929
     context = {
         'mes': mes,
         'aniversario': aniversario,
@@ -166,7 +181,7 @@ def main():
 	adicionaJanta(fullText)
 	formataEmSemanas()
 	create_index_html()
-  
+
 if __name__ == "__main__":
     main()
 
