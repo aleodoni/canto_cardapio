@@ -91,11 +91,7 @@ def formataEmSemanas():
 					semana1.append(Refeicao('', '', '', '', ''))
 					contador = contador + 1
 					marcado = True
-<<<<<<< HEAD
 					print("adicionando branco na semana1")
-=======
-					#print("adicionando branco na semana1")
->>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929
 			semana1.append(item)
 		elif semana == 2:
 			semana2.append(item)
@@ -134,11 +130,7 @@ def trataCelula(celula):
 	substituido = pattern.sub(r'\1 \2', retorno)
 	return substituido
 
-<<<<<<< HEAD
-doc = docx.Document('cardapio_maio.docx')
-=======
-doc = docx.Document('cardapio_fevereiro19.docx')
->>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929
+doc = docx.Document('cardapio_janeiro.docx')
 fullText = []
 refeicoes = []
 contador = 1
@@ -150,18 +142,11 @@ for table in doc.tables:
 			fullText.append(trataCelula(cell))
 
 def create_index_html():
-<<<<<<< HEAD
-    fname = "maio.html"
-    mes = "maio"
-    aniversario = "31/05 (sexta-feira)"
-    lanche = "09/03 (terça-feira)"
+    fname = "janeiro.html"
+    mes = "janeiro"
+    aniversario = "31/01 (sexta-feira)"
+    lanche = ""
 
-=======
-    fname = "fevereiro19.html"
-    mes = "fevereiro"
-    aniversario = "28/02 (quinta-feira)"
-    lanche = "14/02 (quinta-feira)"
->>>>>>> 15e32b17c6ec416d4dc09513bc524764ab14d929
     context = {
         'mes': mes,
         'aniversario': aniversario,
